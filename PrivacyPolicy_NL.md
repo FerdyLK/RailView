@@ -1,99 +1,49 @@
-# Privacyverklaring voor Railveal
+# Privacy Policy for Railveal for iOS
 
-**Ingangsdatum: 1 september 2026**
+Last updated: October 24, 2026
 
-Railveal is een kaartapplicatie voor Android waarmee Nederlandse spoorweginfrastructuurgegevens kunnen worden bekeken.
+Railveal is a map app for viewing Dutch railway infrastructure on iPhone and iPad, with Siri, Shortcuts and CarPlay integration.
 
-## Welke gegevens gebruikt Railveal?
+## Location and permissions
 
-Railveal kan, na uw toestemming, uw benaderde of precieze huidige locatie gebruiken wanneer de app wordt gestart of wanneer u op de locatieknop tikt. De locatie wordt uitsluitend gebruikt om:
+With your permission, Railveal uses your current location to center the map, determine nearby railway geocode and kilometrage information, and find nearby crossings or access points. This also applies to location features you invoke through Siri, Shortcuts or CarPlay. The app requests location access while in use and the best available accuracy; the actual accuracy depends on your iOS permissions and location conditions.
 
-- de kaart op uw positie te centreren;
-- uw positie op de kaart weer te geven;
-- nabijgelegen spoorweginformatie, zoals geocodes, spoornamen en kilometreringen, op te vragen en weer te geven.
+You can deny or revoke location access in iOS Settings. Manual map browsing and searching remain available. Railveal does not record a location history or request always-on background location access.
 
-Railveal:
+## Accounts and tracking
 
-- maakt geen gebruikersaccounts aan;
-- gebruikt geen advertentie-identificatoren;
-- bevat geen advertenties;
-- gebruikt geen analytics- of trackingdiensten;
-- volgt gebruikers niet over andere apps of websites heen;
-- slaat geen locatiegeschiedenis op;
-- heeft geen eigen backend waarop persoonsgegevens worden opgeslagen.
+Railveal does not create user accounts, use advertising identifiers, display advertisements or include analytics or tracking services. It does not operate its own backend for storing your personal data.
 
-## Locatietoestemming
+## Network requests and external services
 
-Railveal vraagt alleen om toegang tot uw locatie terwijl u de app gebruikt. Afhankelijk van uw keuze kan Android een benaderde of precieze locatie beschikbaar stellen. De locatie wordt opgehaald via de locatiediensten van Android en Google Play Services.
+Railveal communicates directly with the services needed for the feature you use:
 
-U kunt de locatietoestemming weigeren of later intrekken via de Android-instellingen. De kaart en handmatige zoekfuncties blijven dan bruikbaar, maar functies voor de huidige locatie en nabijgelegen spoorinformatie werken niet of beperkt.
+- **ProRail:** railway infrastructure, aerial imagery, cadastral data, geocodes and kilometrage. Requests can contain the visible map area, a selected coordinate, your current coordinate for location features, or a geocode and kilometer value you entered.
+- **Apple MapKit:** the base map and address geocoding. Address searches are submitted to Apple's geocoding service to obtain a coordinate.
+- **PDOK:** map images for the optional nationwide aerial-photo layer, requested for the relevant map area.
+- **Apple Maps:** when you request navigation, including through Siri or CarPlay, Railveal passes the destination to Apple Maps and requests driving directions. For some selected locations near railway tracks, this destination is a suitable nearby gate or crossing rather than the selected point.
+- **Google Maps or Apple Maps route links:** QR codes contain a driving-directions link with destination coordinates and, where included, a destination name. The QR image is generated on the device without contacting a QR-code service. Opening the encoded link sends the destination to the selected maps service. Anyone who scans the code can read its destination.
+- **Spoor in Beeld / Georizon:** tapping the perspective button opens the external viewer with the selected location's RD coordinates in the URL.
 
-## Netwerkverkeer
+As with normal internet requests, these providers can receive technical information such as an IP address, request time and requested resource. Their own privacy policies and retention practices apply. Railveal does not control their server logs.
 
-Railveal maakt rechtstreeks verbinding met diensten van derden. De app gebruikt geen tussenliggende server van FLI.
+## Local storage and retention
 
-### ProRail
+- **Favorites:** objects you explicitly save are stored locally in app preferences, including their coordinates, names, details and any associated navigation destination. They remain available across app sessions until you remove them using the star in the object details. Railveal does not synchronize them through its own server.
+- **Siri and Shortcuts handoff:** pending actions and their selected objects or result lists can be stored locally so the app can continue an invoked action. The app accepts these handoffs for five minutes; it clears them when consumed or when subsequently read as expired. This is not a guarantee of deletion by a background timer after five minutes.
+- **Other session data:** ordinary search text, results, map selections, measurements and current-location information are held for app operation and are not saved as a location history. Saving an object as a favorite is the explicit exception for selected objects.
+- **Caches and device backups:** map and network components may cache data. iOS manages those caches and may include app data in device backups according to your device settings. Railveal does not provide its own cloud backup service.
 
-Railveal laadt spoor-, wissel-, overweg-, toegangspoort-, luchtfoto-, geocode- en kilometreringsgegevens uit openbare kaartdiensten van ProRail.
+## Clipboard and user-controlled sharing
 
-Om relevante gegevens op te vragen, kunnen de volgende gegevens naar ProRail worden verzonden:
+When you tap a copy button, Railveal places the displayed RD coordinates, or measurement endpoints and distance, on the system clipboard. Other apps can receive that text when you paste it; system clipboard features are controlled by iOS. Displaying a QR code makes its destination available to anyone who scans it.
 
-- het zichtbare kaartgebied;
-- een door u aangetikte of lang ingedrukte kaartcoördinaat;
-- uw huidige coördinaat wanneer locatiefuncties worden gebruikt;
-- een ingevoerde geocode en kilometrering.
+Siri and Shortcuts interactions are also subject to your Apple settings and Apple's handling of those services.
 
-Deze gegevens worden alleen gebruikt om de gevraagde spoorweginformatie op te halen.
+## Data sources
 
-### OpenStreetMap en MapLibre
-
-De basiskaart wordt door MapLibre weergegeven met kaarttegels van OpenStreetMap. Bij het laden en bewegen van de kaart vraagt de app de benodigde kaarttegels op bij de OpenStreetMap-tegeldienst.
-
-Zoals bij normaal internetverkeer kunnen de serverbeheerders daarbij technische gegevens ontvangen, zoals uw IP-adres, tijdstip van het verzoek, opgevraagde tegel en algemene informatie die in het netwerkverzoek wordt meegestuurd. Railveal gebruikt deze gegevens niet om gebruikersprofielen op te bouwen.
-
-### Adreszoeken
-
-Wanneer u zoekt op straat- en plaatsnaam, gebruikt Railveal de geocoderingsvoorziening van Android. De ingevoerde adreszoekopdracht kan daardoor worden verwerkt door de geocoderingsdienst die op uw Android-apparaat beschikbaar is. Welke aanbieder dit uitvoert, kan afhangen van uw apparaat en Android-configuratie.
-
-Zoeken op een ProRail-geocode en kilometrering wordt rechtstreeks via de openbare ProRail-diensten uitgevoerd.
-
-### Externe routeapps
-
-Railveal start niet automatisch een navigatie. Alleen wanneer u bewust op **Route plannen** tikt, opent de app een externe kaarten- of routeapp met de coördinaten van de gekozen bestemming. Vanaf dat moment is het privacybeleid van de gekozen externe app of dienst van toepassing.
-
-Hectometerpunten en dienstoverpaden kunnen vanuit Railveal niet als navigeerbare bestemming worden geopend.
-
-## Opslag en bewaartermijn
-
-Zoektekst, zoekresultaten, geselecteerde kaartobjecten en locatie-informatie worden alleen in het werkgeheugen gebruikt gedurende de huidige appsessie. Railveal bewaart deze gegevens niet in een lokale database en verstuurt ze niet naar een eigen server.
-
-Kaart- en netwerkcomponenten kunnen technisch noodzakelijke tijdelijke caches gebruiken om gegevens efficiënt weer te geven. Het beheer daarvan vindt plaats door Android en de gebruikte softwarecomponenten.
-
-## Delen van gegevens
-
-FLI verkoopt geen persoonsgegevens en deelt geen persoonsgegevens voor advertenties, profilering of tracking. Gegevens worden alleen met de hierboven genoemde diensten uitgewisseld voor zover dit nodig is om de door u gebruikte kaart-, zoek-, locatie- of routefunctie uit te voeren.
-
-## Gegevens van derden
-
-- Spoorweginfrastructuur- en luchtfotogegevens worden geleverd door **ProRail** en gebruikt conform de **CC BY 4.0-licentie**.
-- De basiskaart bevat gegevens van **OpenStreetMap-bijdragers**.
-- De kaart wordt weergegeven met de open-sourcebibliotheek **MapLibre**.
-- Locatiebepaling kan gebruikmaken van **Google Play Services**.
-- Adreszoekopdrachten worden verwerkt door de geocoderingsvoorziening van het Android-apparaat.
-- Een door u geopende externe routeapp verwerkt de bestemming volgens het eigen privacybeleid.
-
-Deze externe partijen kunnen hun eigen voorwaarden, privacybeleid en bewaartermijnen hanteren.
-
-## Kinderen
-
-Railveal is niet ontworpen om bewust persoonsgegevens van kinderen te verzamelen. De app bevat geen accounts, sociale functies, advertenties of tracking.
-
-## Wijzigingen in deze privacyverklaring
-
-Deze privacyverklaring kan worden bijgewerkt wanneer de functionaliteit, gebruikte gegevensbronnen of wettelijke vereisten veranderen. De nieuwste versie vermeldt bovenaan de geldende ingangsdatum.
+Railway infrastructure and cadastral data are supplied by ProRail with CC BY 4.0 attribution. The optional aerial layer is supplied by PDOK/Beeldmateriaal with CC BY 4.0 attribution. Apple supplies MapKit map and geocoding functionality. Attribution is shown in the app.
 
 ## Contact
 
-Heeft u vragen over deze privacyverklaring of over de verwerking van gegevens binnen Railveal? Neem dan contact op met:
-
-**FLI**
+For privacy questions about Railveal, contact FLI.
